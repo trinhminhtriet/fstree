@@ -1,0 +1,35 @@
+[package]
+name = "fstree"
+version = "0.1.0" 
+authors = ["Triet Trinh <contact@trinhminhtriet.com>"]
+edition = "2021"
+description = "A blazing-fast directory tree viewer for terminals—minimalist, interactive, and packed with smart features!"
+license = "MIT" 
+readme = "README.md"
+homepage = "https://trinhminhtriet.com" 
+repository = "https://github.com/trinhminhtriet/fstree" 
+keywords = ["ls", "tree", "filesystem", "command-line"]
+categories = ["command-line-utilities", "filesystem"]
+
+[dependencies]
+anyhow = "1.0"
+colored = "2.1.0"
+clap = { version = "4.5.7", features = ["derive"] }
+git2 = { version = "0.20.2", default-features = false }
+ignore = "0.4.22"
+lscolors = "0.9"
+url = "2.5.2"
+ratatui = "0.27.0"
+natord = "1.0"
+
+# Dependencies for testing the command-line interface
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.1"
+tempfile = "3.10"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+panic = "abort"

@@ -1,0 +1,24 @@
+# rustfmt.toml
+
+# The maximum width of a line.
+max_width = 100
+
+# Rust can sometimes be very vertical. This setting tells rustfmt
+# to try and be a bit more compact horizontally.
+use_small_heuristics = "Max"
+
+# Automatically sort `use` statements. This is fantastic for keeping
+# imports clean and consistent.
+reorder_imports = true
+
+# Controls how imports are grouped. "StdExternalCrate" is a modern
+# style that groups standard library, then external crates, then local
+# crate modules.
+# Example:
+# use std::fs;
+#
+# use colored::Colorize;
+# use rayon::prelude::*;
+#
+# use crate::my_module;
+# group_imports = "StdExternalCrate"

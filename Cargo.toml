@@ -24,7 +24,7 @@ natord = "1.0"
 
 # Dependencies for testing the command-line interface
 [dev-dependencies]
-assert_cmd = "2.0"
+assert_cmd = "2.1"
 predicates = "3.1"
 tempfile = "3.23"
 
